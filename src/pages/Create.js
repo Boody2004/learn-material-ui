@@ -10,8 +10,10 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Button from "@mui/material/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Create() {
+  const history = useHistory();
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
   const [category, setCategory] = useState("todos");
@@ -19,8 +21,12 @@ export default function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (title && details && category) {
-      console.log(title, details, category);
+    if (title && details) {
+      fetch("http://localhost:8000/notes", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ title, details, category }),
+      }).then(() => history.push("/"));
     }
   };
 
