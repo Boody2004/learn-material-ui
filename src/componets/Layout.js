@@ -105,13 +105,10 @@ export default function Layout({ children }) {
           >
             <MenuIcon />
           </IconButton>
-
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Boody Note`s
           </Typography>
-
           {/* <Typography sx={{ flexGrow: 1 }}>{Date().toString()}</Typography> */}
-
           <Avatar src="/mario-av.png" />
         </Toolbar>
       </AppBar>
