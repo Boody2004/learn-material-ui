@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Grid, Paper } from "@mui/material";
+import { Grid } from "@mui/material";
 import NoteCard from "../componets/NoteCard";
 
 export default function Notes() {
@@ -21,7 +21,7 @@ export default function Notes() {
   };
 
   return (
-    <Container>
+    <section>
       <Grid container spacing={3}>
         {notes.map((note) => (
           <Grid item key={note.id} xs={12} md={6} lg={4}>
@@ -29,6 +29,6 @@ export default function Notes() {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </section>
   );
 }

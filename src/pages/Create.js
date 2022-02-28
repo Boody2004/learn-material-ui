@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -31,7 +30,7 @@ export default function Create() {
   };
 
   return (
-    <Container>
+    <section>
       <Typography
         variant="h6"
         color="textSecondary"
@@ -105,6 +104,6 @@ export default function Create() {
           </Button>
         </Box>
       </form>
-    </Container>
+    </section>
   );
 }
